@@ -1,5 +1,5 @@
-FROM maxexcloo/nginx:latest
-MAINTAINER Max Schaefer <max@excloo.com>
+FROM kloudpeak/nginx:latest
+MAINTAINER Orkesh <orkesh@kloudpeak.com>
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E9C74FEEA2098A6E && \
 	echo "deb http://packages.dotdeb.org/ wheezy-php56 all" > /etc/apt/sources.list.d/php.list && \
 	apt-get update && \
