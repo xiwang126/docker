@@ -6,6 +6,10 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ABF5BD827BD9BF62 &&
 	apt-get install -y nginx && \
 	apt-get clean && \
 	echo -n > /var/lib/apt/extended_states
+VOLUME /etc/nginx/conf.d
+VOLUME /etc/nginx/host.d
+VOLUME /etc/nginx/nginx.d
+VOLUME /data
 RUN rm -rf /etc/nginx/*.d && \
 	mkdir -p /etc/nginx/addon.d /etc/nginx/conf.d /etc/nginx/host.d /etc/nginx/nginx.d
 ADD config /config
